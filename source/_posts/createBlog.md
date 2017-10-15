@@ -3,18 +3,21 @@ title: 博客搭建过程小记
 categories: 其他
 date: 2017-10-14 16:18
 comments: false
+toc: true
+reward: true
 tags:
-        - Hexo,Github
+        - Hexo
+		- Github
 ---
 博客搭建方法主要借鉴于 [CrazyMilk](http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more) 搭建博客的过程。
 
 
 
-## 环境准备
+## 0x01 环境准备
 
 本次博客的搭建主要借助于 Github 平台，利用 Hexo 搭建自己免费简易的小窝。同时完成的是将博客备份在 Github 同一个仓库的不同分支上。
 
-### 操作系统：windows 10
+### 操作系统：Windows 10
 
 ### Git版本：2.12.0.windows.1
 
@@ -22,7 +25,7 @@ tags:
 
 ### Node.js的版本：v6.11.4
 
-在此可以下载 [NodeJS](https://nodejs.org/en/) 进行安装，安装完成即可。
+在此可以下载 [Node.js](https://nodejs.org/en/) 进行安装，安装完成即可。
 
 ### npm的版本：3.10.10
 
@@ -30,9 +33,9 @@ tags:
 
 
 
-## 具体搭建过程
+## 0x02 本地搭建过程
 
-我的过程是先在Github上面新建一个仓库，命名必须为【your_user_name.github.io】,选中初始化的README选项，完成创建仓库。在Github中新建一个分支为hexo，并将分支hexo设置为默认分支（具体方法可找度娘）。此时就有两个分支：master分支用于存储生成的网页；hexo分支用于存储源文件的备份。
+我的过程是先在Github上面新建一个仓库，命名必须为【[your_user_name].github.io】,选中初始化的README选项，完成创建仓库。在Github中新建一个分支为hexo，并将分支hexo设置为默认分支（具体方法可找度娘）。此时就有两个分支：master分支用于存储生成的网页；hexo分支用于存储源文件的备份。
 
 之后在电脑的文档文件夹内右键选择【Git Bash Here】，在弹出的 shell 内输入以下内容：
 
@@ -64,7 +67,7 @@ $ hexo server
 
 
 
-## 将博客部署在 Github 上面
+## 0x03 将博客部署在 Github 上面
 
 在此之前，需要将之前移走的隐藏文件【.git】移到【[your_user_name].github.io】文件夹中，可以不要【README】文件。之后在当前文件夹内右键选择【Git Bash Here】，此时应该显示的是 hexo 分支。
 
@@ -92,19 +95,19 @@ $ hexo generate
 $ hexo deploy
 ```
 
-之后，可以通过在浏览器键入：username.github.io进行浏览。到此，就已经完成了博客的搭建，并将博客的源文件备份到了Github上面的hexo分支。
+之后，可以通过在浏览器键入：[your_user_name].github.io进行浏览。到此，就已经完成了博客的搭建，并将博客的源文件备份到了Github上面的hexo分支。
 
 
-## 日常修改
+## 0x04 日常修改
 
 在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：
 
 1. 依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；
 2. 然后才执行hexo generate -d发布网站到master分支上。
 
-小注：每次更新博客也可以用下面的方法：
 
 ``` bash
+#小注：每次更新博客也可以用下面的方法：
 $ hexo clean
 $ hexo generate
 $ hexo deploy
@@ -112,9 +115,9 @@ $ hexo deploy
 
 
 
-## 在其他电脑上更新博客
+## 0x05 在其他电脑上更新博客
 
-使用下列步骤完成博客的更新：
+使用下列步骤完成在其他电脑上博客的更新：
 
 1. 使用git clone git@github.com:[your_user_name]/[your_user_name].github.io.git拷贝仓库（默认分支为hexo）；
 2. 在本地新拷贝的[your_user_name].github.io文件夹下通过Git bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）
