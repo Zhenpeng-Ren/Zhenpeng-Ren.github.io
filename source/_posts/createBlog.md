@@ -2,7 +2,7 @@
 title: 博客搭建过程小记
 categories: 其他
 date: 2017-10-14 16:18
-comments: false
+comments: true
 toc: true
 reward: true
 tags:
@@ -15,19 +15,19 @@ tags:
 
 ## 0x01 环境准备
 
-本次博客的搭建主要借助于 Github 平台，利用 Hexo 搭建自己免费简易的小窝。同时完成的是将博客备份在 Github 同一个仓库的不同分支上。
+本次博客的搭建主要借助于 Github 平台，利用 Hexo 搭建自己免费简易的博客。同时完成的是将博客备份在 Github 同一个仓库的不同分支上。
 
-### 操作系统：Windows 10
+### 1.1 操作系统：Windows 10
 
-### Git版本：2.12.0.windows.1
+### 1.2 Git版本：2.12.0.windows.1
 
 在此可以下载 [Git](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git) 进行安装，主要的配置可以 [在此](https://segmentfault.com/a/1190000002645623) 查看。
 
-### Node.js的版本：v6.11.4
+### 1.3 Node.js的版本：v6.11.4
 
 在此可以下载 [Node.js](https://nodejs.org/en/) 进行安装，安装完成即可。
 
-### npm的版本：3.10.10
+### 1.4 npm的版本：3.10.10
 
  npm 是随同 NodeJS 一起安装的包管理工具，能解决 NodeJS 代码部署上的很多问题。
 
@@ -120,4 +120,10 @@ $ hexo deploy
 使用下列步骤完成在其他电脑上博客的更新：
 
 1. 使用git clone git@github.com:[your_user_name]/[your_user_name].github.io.git拷贝仓库（默认分支为hexo）；
-2. 在本地新拷贝的[your_user_name].github.io文件夹下通过Git bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）
+2. 在本地新拷贝的【[your_user_name].github.io】文件夹下通过【Git bash】依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）
+
+
+
+## 后记
+
+如有问题，请联系邮件：zhenpeng.ren@gmail.com

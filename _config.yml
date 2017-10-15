@@ -55,7 +55,7 @@ index_generator:
 # Category & Tag
 default_category: uncategorized
 category_map:
-    编程: programming
+    实例: examples
     随笔: life
     其他: other
 tag_map:
