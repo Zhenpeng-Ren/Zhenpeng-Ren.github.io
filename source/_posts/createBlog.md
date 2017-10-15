@@ -6,7 +6,7 @@ comments: false
 toc: true
 reward: true
 tags:
-        - Hexo
+		- Hexo
 		- Github
 ---
 博客搭建方法主要借鉴于 [CrazyMilk](http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more) 搭建博客的过程。
