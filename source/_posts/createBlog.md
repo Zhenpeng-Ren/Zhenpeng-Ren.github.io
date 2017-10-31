@@ -6,14 +6,13 @@ comments: true
 toc: true
 reward: true
 tags:
-		- Hexo
-		- Github
+	- Hexo
+	- Github
 ---
-博客搭建方法主要借鉴于 [CrazyMilk](http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more) 搭建博客的过程。
 
 
 
-## 0x01 环境准备
+## 0x01 环境准备 ##
 
 本次博客的搭建主要借助于 Github 平台，利用 Hexo 搭建自己免费简易的博客。同时完成的是将博客备份在 Github 同一个仓库的不同分支上。
 
@@ -29,7 +28,7 @@ tags:
 
 ### 1.4 npm的版本：3.10.10
 
- npm 是随同 NodeJS 一起安装的包管理工具，能解决 NodeJS 代码部署上的很多问题。
+npm 是随同 NodeJS 一起安装的包管理工具，能解决 NodeJS 代码部署上的很多问题。
 
 
 
@@ -98,6 +97,7 @@ $ hexo deploy
 之后，可以通过在浏览器键入：[your_user_name].github.io进行浏览。到此，就已经完成了博客的搭建，并将博客的源文件备份到了Github上面的hexo分支。
 
 
+
 ## 0x04 日常修改
 
 在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：
@@ -126,4 +126,4 @@ $ hexo deploy
 
 ## 后记
 
-如有问题，请联系邮件：zhenpeng.ren@gmail.com
+本博客的搭建过程参考了 [CrazyMilk](http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more) 的方法，在此给予感谢！
