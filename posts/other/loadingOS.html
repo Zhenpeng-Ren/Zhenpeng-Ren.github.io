@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="0x01 背景介绍由于不想将惠普电脑装入盗版系统，惊奇的发现惠普电脑自带一个 系统恢复 的功能。双系统采用的方式为：Windows 10 + Ubuntu 14.040x02 将惠普笔记本执行系统恢复过程首先，需要将原有系统的资料做好备份，以免丢失。使用 HP Recovery Manager进行恢复：">
+<meta name="keywords" content="Windows 10,Ubuntu 14.04">
+<meta property="og:type" content="article">
+<meta property="og:title" content="惠普笔记本装双系统的小坑">
+<meta property="og:url" content="http://yoursite.com/posts/other/loadingOS.html">
+<meta property="og:site_name" content="G_G">
+<meta property="og:description" content="0x01 背景介绍由于不想将惠普电脑装入盗版系统，惊奇的发现惠普电脑自带一个 系统恢复 的功能。双系统采用的方式为：Windows 10 + Ubuntu 14.040x02 将惠普笔记本执行系统恢复过程首先，需要将原有系统的资料做好备份，以免丢失。使用 HP Recovery Manager进行恢复：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2019-10-26T16:26:24.051Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="惠普笔记本装双系统的小坑">
+<meta name="twitter:description" content="0x01 背景介绍由于不想将惠普电脑装入盗版系统，惊奇的发现惠普电脑自带一个 系统恢复 的功能。双系统采用的方式为：Windows 10 + Ubuntu 14.040x02 将惠普笔记本执行系统恢复过程首先，需要将原有系统的资料做好备份，以免丢失。使用 HP Recovery Manager进行恢复：">
+
+<link rel="canonical" href="http://yoursite.com/posts/other/loadingOS.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>惠普笔记本装双系统的小坑 | G_G</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">G_G</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/other/loadingOS.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mr. Pinoc">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="G_G">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          惠普笔记本装双系统的小坑
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2017-11-01 09:46:08" itemprop="dateCreated datePublished" datetime="2017-11-01T09:46:08+08:00">2017-11-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/other/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="0x01-背景介绍"><a href="#0x01-背景介绍" class="headerlink" title="0x01 背景介绍"></a>0x01 背景介绍</h2><p>由于不想将惠普电脑装入盗版系统，惊奇的发现惠普电脑自带一个 <em>系统恢复</em> 的功能。</p><p>双系统采用的方式为：Windows 10 + Ubuntu 14.04</p><h2 id="0x02-将惠普笔记本执行系统恢复过程"><a href="#0x02-将惠普笔记本执行系统恢复过程" class="headerlink" title="0x02 将惠普笔记本执行系统恢复过程"></a>0x02 将惠普笔记本执行系统恢复过程</h2><p>首先，需要将原有系统的资料做好备份，以免丢失。</p><p><a href="https://support.hp.com/cn-zh/document/c04777644" target="_blank" rel="noopener">使用 HP Recovery Manager进行恢复</a>：</p><a id="more"></a>
+
+
+
+<p>如果 Windows 正常打开，请执行以下步骤，通过 Windows“搜索”启动系统恢复。</p>
+<ol>
+<li>关闭电脑。</li>
+<li>断开所有连接设备和电缆，如个人便携式硬盘、U 盘、打印机和传真机。从内部驱动器中取出介质，并卸下所有最近添加的内部硬件（台式机的话，不要断开显示器、键盘、鼠标和电源线的连接）。</li>
+<li>启动电脑。</li>
+<li>从“搜索”界面，输入“Recovery Manager”，然后从搜索结果中选择“HP Recovery Manager”。</li>
+<li>在“帮助”下，请点击 Windows 恢复环境。</li>
+<li>点击“确定”。系统将重启进入 Windows 恢复环境。</li>
+<li>点击“故障排除”。</li>
+<li>点击“Recovery Manager”。</li>
+<li>选择“在没有备份文件的情况下进行恢复”，然后点击“下一步”。</li>
+<li>阅读系统恢复信息。要继续操作，请点击 “下一步”。</li>
+<li>完成准备工作。点击“继续”按钮。</li>
+</ol>
+<p>至此，电脑将自动重启。按照屏幕说明操作，请勿在此期间中断操作。在恢复期间，电脑会重启多次，之后一个崭新的windows 10系统就展现出来了。</p>
+<h2 id="0x03-装入Ubuntu-14-04系统"><a href="#0x03-装入Ubuntu-14-04系统" class="headerlink" title="0x03 装入Ubuntu 14.04系统"></a>0x03 装入Ubuntu 14.04系统</h2><h3 id="3-1-准备的软件及工具"><a href="#3-1-准备的软件及工具" class="headerlink" title="3.1 准备的软件及工具"></a>3.1 准备的软件及工具</h3><ol>
+<li>下载 Ubuntu 14.04 <a href="http://cdimage.ubuntu.com/netboot/14.04/?_ga=2.63084719.165761440.1509501681-1262211413.1509501681" target="_blank" rel="noopener">官方镜像</a></li>
+<li><a href="https://rufus.akeo.ie/?locale" target="_blank" rel="noopener">rufus</a> (用于制作U盘镜像)</li>
+<li>大于4G的U盘</li>
+</ol>
+<h3 id="3-2-磁盘空间初步分配"><a href="#3-2-磁盘空间初步分配" class="headerlink" title="3.2 磁盘空间初步分配"></a>3.2 磁盘空间初步分配</h3><p>按下“WINDOWS”+“X”组合键，进入磁盘管理，选择一个空间大点的磁盘，右键选择“压缩卷”，给 Ubuntu 分配了50G的容量。</p>
+<h3 id="3-3-禁用快速启动"><a href="#3-3-禁用快速启动" class="headerlink" title="3.3 禁用快速启动"></a>3.3 禁用快速启动</h3><p>==》 左下角右键，菜单内找到电源选项<br>==》 点击“选择电源按钮的功能”<br>==》 点击“更改当前不可用的设置”<br>==》 取消“启用快速启动”</p>
+<p>【注】：  “快速启动”是 Windows 10 为了加速自己的启动过程而跳过一些bios的检查。</p>
+<h3 id="3-4-禁用安全启动（Secure-Boot）"><a href="#3-4-禁用安全启动（Secure-Boot）" class="headerlink" title="3.4 禁用安全启动（Secure Boot）"></a>3.4 禁用安全启动（Secure Boot）</h3><p>==》 所有设置中选择“更新和安全”<br>==》 选择“恢复”<br>==》 选择“立即重启”<br>==》 选择“疑难解答”<br>==》 选择“高级选项”<br>==》 选择“启动设置”<br>==》 选择相应的选项关闭安全模式即可</p>
+<p>也可以直接进入BIOS，在 Secure Boot 中将值更改为 Disabled 即可。</p>
+<h3 id="3-5-制作Ubuntu的启动U盘"><a href="#3-5-制作Ubuntu的启动U盘" class="headerlink" title="3.5 制作Ubuntu的启动U盘"></a>3.5 制作Ubuntu的启动U盘</h3><p>插入U盘，打开准备好的 rufus ，选择Ubuntu 14.04的镜像，点击开始进行写入，稍等片刻等待写入完成。</p>
+<h3 id="3-6-U盘安装Ubuntu-14-04"><a href="#3-6-U盘安装Ubuntu-14-04" class="headerlink" title="3.6 U盘安装Ubuntu 14.04"></a>3.6 U盘安装Ubuntu 14.04</h3><p>惠普电脑是在开机时连续按 ESC 键，找到 USB 启动，电脑将进行重启。</p>
+<p>其中的设置不用细说，下面着重讲述一下“安装类型”这一步：</p>
+<ol>
+<li>选择“其他选项”</li>
+<li>为空闲磁盘分区：在这一步会看到我们之前分配的未使用磁盘空间，我们即将为这块空闲磁盘分区。<br> — /：存储系统文件，建议10GB ~ 15GB，一般16GB即可；<br> — swap：交换分区，即Linux系统的虚拟内存，建议是物理内存的2倍；<br> — /home：home目录，存放音乐、图片及下载等文件的空间，建议最后分配所有剩下的空间；<br> — /boot：包含系统内核和系统启动所需的文件，实现双系统的关键所在，建议200M<br> 【注】：实际上，一块硬盘最多容纳4个主分区，或3个主分区外加1个扩展分区，在选择分区类型时，可能会出现“安装系统时空闲分区不可用”状况，为了解决问题，下面一律选择“逻辑分区”。</li>
+<li>最重要的一步：选择/boot对应的盘符作为“安装启动引导器的设备”，务必保证一致。</li>
+</ol>
+<p>之后按照正常的步骤完成安装即可。</p>
+<h2 id="0x04-如何进入Ubuntu系统"><a href="#0x04-如何进入Ubuntu系统" class="headerlink" title="0x04 如何进入Ubuntu系统"></a>0x04 如何进入Ubuntu系统</h2><p>安装完重启，发现还是进入了 win10 系统，无法进入 Ubuntu 系统，这时有一个方法可以进入 Ubuntu 系统，启动的时候按 ESC+F9 进入启动选择界面，可以看到有 win10 和 Ubuntu 的启动项，选择 Ubuntu 就可以启动了。</p>
+<p>虽然可以使用双系统，但还是不方便，启动的时候按ESC稍慢一点就进入了win10。基于此，研究了一下EFI文件系统，EFI是一个单独的分区，在第一块磁盘的开始256M空间上，ubuntu启动后EFI文件系统mount到/boot/efi目录。</p>
+<p>惠普笔记本在 BIOS 驱动中指定了从EFI/Microsoft/Boot/bootmgfw.efi启动，即使EFI下还有其他的系统启动项也不会从其他系统启动，因此可以修改此处达到我们的目的。</p>
+<p>步骤如下：</p>
+<ol>
+<li>首先备份win10的启动项（在目录/usr/下）</li>
+<li>在同一目录下，复制WINDOWS文件夹并更名为win10</li>
+<li>将/中的grubx64.efi替换掉/中的bootmgfw.efi，这样替换之后grub就接管了系统的启动。</li>
+<li>打开一个终端，执行update-grub2来更新启动项，更新完毕以后在/boot/grub/grub.cfg文件中找到相应的位置，把windows改成win10就可以了。</li>
+</ol>
+<h2 id="0x05-后记"><a href="#0x05-后记" class="headerlink" title="0x05 后记"></a>0x05 后记</h2><p>参考链接：<br>【1】<a href="https://support.hp.com/cn-zh/document/c04777644" target="_blank" rel="noopener">惠普客户支持</a><br>【2】<a href="https://tinyslik.github.io/2017/02/10/win10+kylin%E5%8F%8C%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener">折腾uefi下win10与Ubuntu 16.04 LTS双系统，完美兼容grub2引导</a><br>【3】<a href="http://blog.csdn.net/zyix_0712/article/details/69675748" target="_blank" rel="noopener">暗影精灵2pro安装win10+ubuntu16.10双系统</a></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    Donate
+  </button>
+  <div id="qr" style="display: none;">
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Windows-10/" rel="tag"># Windows 10</a>
+              <a href="/tags/Ubuntu-14-04/" rel="tag"># Ubuntu 14.04</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/posts/other/createBlog.html" rel="next" title="博客搭建过程小记">
+                  <i class="fa fa-chevron-left"></i> 博客搭建过程小记
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-背景介绍"><span class="nav-number">1.</span> <span class="nav-text">0x01 背景介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-将惠普笔记本执行系统恢复过程"><span class="nav-number">2.</span> <span class="nav-text">0x02 将惠普笔记本执行系统恢复过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-装入Ubuntu-14-04系统"><span class="nav-number">3.</span> <span class="nav-text">0x03 装入Ubuntu 14.04系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-准备的软件及工具"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 准备的软件及工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-磁盘空间初步分配"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 磁盘空间初步分配</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-禁用快速启动"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 禁用快速启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-禁用安全启动（Secure-Boot）"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 禁用安全启动（Secure Boot）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-制作Ubuntu的启动U盘"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 制作Ubuntu的启动U盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-U盘安装Ubuntu-14-04"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 U盘安装Ubuntu 14.04</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-如何进入Ubuntu系统"><span class="nav-number">4.</span> <span class="nav-text">0x04 如何进入Ubuntu系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x05-后记"><span class="nav-number">5.</span> <span class="nav-text">0x05 后记</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="Mr. Pinoc"
+    src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Mr. Pinoc</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mr. Pinoc</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
