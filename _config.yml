@@ -48,15 +48,15 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: 'other'
   per_page: 8
   order_by: -date
   
 # Category & Tag
 default_category: uncategorized
 category_map:
-    工作: project
-    随笔: life
+    工作琐事: project
+    生活杂谈: life
     其他: other
 tag_map:
 
