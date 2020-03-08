@@ -197,6 +197,7 @@
         </h1>
 
         <div class="post-meta">
+
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -228,10 +229,87 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="0x01-时光倒流，流向往昔岁月"><a href="#0x01-时光倒流，流向往昔岁月" class="headerlink" title="0x01 时光倒流，流向往昔岁月"></a>0x01 时光倒流，流向往昔岁月</h2><p>房间里放着许嵩的歌曲，内心里将以前的日子回放了个遍，突然理解了许嵩唱歌写词时的心情💢，灰色头像，千百度，似乎情景较为吻合。</p><p>曾经的我是什么样的呢，或许不同的人会有不一样的印象。父母眼中的我是个勤奋听话的孩子；同学眼中的我是个话少不爱参加同学会没什么存在感的隐形人；某些人眼里的我或许是个不记旧事，不谙世事的无心人。</p>
+          Here's something encrypted, password is required to continue reading.
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/life/annalsDR/1_startStory.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/other/dressHexo.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pursuer">
+      <meta itemprop="description" content="追根溯源，返璞归真">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AOYI">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/other/dressHexo.html" class="post-title-link" itemprop="url">配置BLOG的一些小功能</a>
+        </h1>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-03-08 10:23:50" itemprop="dateCreated datePublished" datetime="2020-03-08T10:23:50+08:00">2020-03-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/other/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="0x01-前言"><a href="#0x01-前言" class="headerlink" title="0x01 前言"></a>0x01 前言</h2><p>主要是搜集一些装扮BLOG界面的方法，将一些经过验证的配置方法放在这里，留着以后可以备用.</p><h2 id="0x02-鼠标点击出现小红心的设置"><a href="#0x02-鼠标点击出现小红心的设置" class="headerlink" title="0x02 鼠标点击出现小红心的设置"></a>0x02 鼠标点击出现小红心的设置</h2><p>在/themes/next/source/js/src下新建文件clicklove.js，接着把下面的代码拷贝到clicklove.js文件中。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="keyword">function</span>(e,t,a)&#123;<span class="keyword">function</span> <span class="function"><span class="title">n</span></span>()&#123;c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>),o(),r()&#125;<span class="keyword">function</span> <span class="function"><span class="title">r</span></span>()&#123;<span class="keyword">for</span>(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=<span class="string">"left:"</span>+d[e].x+<span class="string">"px;top:"</span>+d[e].y+<span class="string">"px;opacity:"</span>+d[e].alpha+<span class="string">";transform:scale("</span>+d[e].scale+<span class="string">","</span>+d[e].scale+<span class="string">") rotate(45deg);background:"</span>+d[e].color+<span class="string">";z-index:99999"</span>);requestAnimationFrame(r)&#125;<span class="keyword">function</span> <span class="function"><span class="title">o</span></span>()&#123;var t=<span class="string">"function"</span>==typeof e.onclick&amp;&amp;e.onclick;e.onclick=<span class="keyword">function</span>(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;<span class="keyword">function</span> i(e)&#123;var a=t.createElement(<span class="string">"div"</span>);a.className=<span class="string">"heart"</span>,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;<span class="keyword">function</span> c(e)&#123;var a=t.createElement(<span class="string">"style"</span>);a.type=<span class="string">"text/css"</span>;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(<span class="string">"head"</span>)[0].appendChild(a)&#125;<span class="keyword">function</span> <span class="function"><span class="title">s</span></span>()&#123;<span class="built_in">return</span><span class="string">"rgb("</span>+~~(255*Math.random())+<span class="string">","</span>+~~(255*Math.random())+<span class="string">","</span>+~~(255*Math.random())+<span class="string">")"</span>&#125;var d=[];e.requestAnimationFrame=<span class="function"><span class="title">function</span></span>()&#123;<span class="built_in">return</span> e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||<span class="keyword">function</span>(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/other/dressHexo.html#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -273,6 +351,7 @@
         </h1>
 
         <div class="post-meta">
+
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -288,7 +367,7 @@
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/project/" itemprop="url" rel="index">
-                    <span itemprop="name">工作琐事</span>
+                    <span itemprop="name">学习琐事</span>
                   </a>
                 </span>
             </span>
@@ -341,6 +420,7 @@
         </h1>
 
         <div class="post-meta">
+
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -417,6 +497,7 @@
         </h1>
 
         <div class="post-meta">
+
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -518,7 +599,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -527,7 +608,7 @@
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -558,8 +639,6 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Pursuer</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a>
-  </div>
 
         
 <div class="busuanzi-count">
@@ -634,5 +713,7 @@
 
   
 
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script>
 </body>
 </html>
