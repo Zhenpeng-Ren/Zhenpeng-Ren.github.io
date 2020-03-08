@@ -2,9 +2,10 @@
 title: 博客搭建过程小记
 categories: 其他
 date: 2017-10-14 16:18
-comments: true
+comments: false
 toc: true
-reward: true
+reward: false
+top: 
 tags:
 	- Hexo
 	- Github
@@ -70,7 +71,7 @@ $ hexo server
 
 在此之前，需要将之前移走的隐藏文件【.git】移到【[your_user_name].github.io】文件夹中，可以不要【README】文件。之后在当前文件夹内右键选择【Git Bash Here】，此时应该显示的是 hexo 分支。
 
-在【[your_user_name].github.io】文件夹中，找到【_config.yml】文件，用notepad++打开修改以下几行为下面这种形式：
+在【[your_user_name].github.io】文件夹中，找到【\_config.yml】文件，用notepad++打开修改以下几行为下面这种形式：
 
 ``` bash
 # Deployment

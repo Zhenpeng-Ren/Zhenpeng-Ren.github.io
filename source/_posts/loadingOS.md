@@ -2,9 +2,10 @@
 title: 惠普笔记本装双系统的小坑
 categories: 其他
 date: 2017-11-01 09:46:08
-comments: true
+comments: false
 toc: true
-reward: true
+reward: false
+top: 
 tags:
 	- Windows 10
 	- Ubuntu 14.04

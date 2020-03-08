@@ -48,14 +48,14 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: 'other'
+  path: ''
   per_page: 8
   order_by: -date
   
 # Category & Tag
 default_category: uncategorized
 category_map:
-    工作琐事: project
+    学习琐事: project
     生活杂谈: life
     其他: other
 tag_map:
@@ -76,6 +76,10 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: next
+
+# Security
+encrypt:
+    enable: true
 
 #目录
 jsonContent:

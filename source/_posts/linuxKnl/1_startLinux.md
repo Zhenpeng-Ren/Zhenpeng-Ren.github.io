@@ -1,10 +1,11 @@
 ---
 title: SOME
-categories: 工作琐事
+categories: 学习琐事
 date: 2019-12-08 20:50:28
-comments: true
+comments: false
 toc: true
-reward: true
+reward: false
+top: 
 tags: 
 	- SUMMARY
 ---
