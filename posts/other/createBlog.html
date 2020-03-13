@@ -237,18 +237,24 @@
 <h2 id="0x02-本地搭建过程"><a href="#0x02-本地搭建过程" class="headerlink" title="0x02 本地搭建过程"></a>0x02 本地搭建过程</h2><p>我的过程是先在Github上面新建一个仓库，命名必须为【[your_user_name].github.io】,选中初始化的README选项，完成创建仓库。在Github中新建一个分支为hexo，并将分支hexo设置为默认分支（具体方法可找度娘）。此时就有两个分支：master分支用于存储生成的网页；hexo分支用于存储源文件的备份。</p>
 <p>之后在电脑的文档文件夹内右键选择【Git Bash Here】，在弹出的 shell 内输入以下内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git --version        <span class="comment">#检查Git的版本</span></span><br><span class="line">$ node -v              <span class="comment">#检查NodeJS的版本</span></span><br><span class="line">$ npm -v               <span class="comment">#检查npm的版本</span></span><br><span class="line">$ git <span class="built_in">clone</span> git@github.com:[your_user_name]/[your_user_name].github.io.git</span><br></pre></td></tr></table></figure>
+
 <p>将克隆下来的文件夹中的隐藏文件【.git】和【README】文件剪切出来，放在一个临时的位置，等会儿再用。<br>之后在Git的shell中操作：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Zhenpeng-Ren.github.io</span><br><span class="line">$ npm install -g hexo-cli       <span class="comment">#使用 npm 完成 Hexo 的安装</span></span><br><span class="line">$ hexo init                     <span class="comment">#在目标文件夹内建立网站所需要的所有文件</span></span><br><span class="line">$ npm install                   <span class="comment">#安装所需的依赖包</span></span><br></pre></td></tr></table></figure>
+
 <p>这样，我们就已经搭建起本地的 Hexo 博客了。可以先执行以下命令（在对应文件夹下），然后再浏览器输入localhost:4000查看效果。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
 <p>到此，我们已经在本地安装了一个博客，但是别人无法浏览，之后会将博客部署在 Github 上面。</p>
 <h2 id="0x03-将博客部署在-Github-上面"><a href="#0x03-将博客部署在-Github-上面" class="headerlink" title="0x03 将博客部署在 Github 上面"></a>0x03 将博客部署在 Github 上面</h2><p>在此之前，需要将之前移走的隐藏文件【.git】移到【[your_user_name].github.io】文件夹中，可以不要【README】文件。之后在当前文件夹内右键选择【Git Bash Here】，此时应该显示的是 hexo 分支。</p>
 <p>在【[your_user_name].github.io】文件夹中，找到【_config.yml】文件，用notepad++打开修改以下几行为下面这种形式：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: 对应仓库的SSH地址（可以在GitHub对应的仓库中复制）</span><br><span class="line">  branch: master    <span class="comment">#分支（User Pages为master，Project Pages为gh-pages）</span></span><br></pre></td></tr></table></figure>
+
 <p>为了能够使Hexo部署到GitHub上，需要安装一个插件，在Git的shell中执行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
 <p>然后，执行下列指令即可完成部署：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
 <p>之后，可以通过在浏览器键入：[your_user_name].github.io进行浏览。到此，就已经完成了博客的搭建，并将博客的源文件备份到了Github上面的hexo分支。</p>
 <h2 id="0x04-日常修改"><a href="#0x04-日常修改" class="headerlink" title="0x04 日常修改"></a>0x04 日常修改</h2><p>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：</p>
 <ol>
@@ -256,6 +262,7 @@
 <li>然后才执行hexo generate -d发布网站到master分支上。</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#小注：每次更新博客也可以用下面的方法：</span></span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
 <h2 id="0x05-在其他电脑上更新博客"><a href="#0x05-在其他电脑上更新博客" class="headerlink" title="0x05 在其他电脑上更新博客"></a>0x05 在其他电脑上更新博客</h2><p>使用下列步骤完成在其他电脑上博客的更新：</p>
 <ol>
 <li>使用git clone <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:[your_user_name]/[your_user_name].github.io.git拷贝仓库（默认分支为hexo）；</li>
@@ -341,7 +348,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -350,7 +357,7 @@
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
