@@ -52,18 +52,20 @@
   };
 </script>
 
-  <meta name="description" content="追根溯源，返璞归真">
-<meta property="og:type" content="website">
-<meta property="og:title" content="AOYI">
-<meta property="og:url" content="http://yoursite.com/archives/2019/12/index.html">
+  <meta name="description" content="0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
+<meta name="keywords" content="Raspberry,Ubuntu 20.04">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派的折腾笔记">
+<meta property="og:url" content="http://yoursite.com/posts/other/ideaTalk/base_raspberry.html">
 <meta property="og:site_name" content="AOYI">
-<meta property="og:description" content="追根溯源，返璞归真">
+<meta property="og:description" content="0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2020-06-27T12:57:51.774Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="AOYI">
-<meta name="twitter:description" content="追根溯源，返璞归真">
+<meta name="twitter:title" content="树莓派的折腾笔记">
+<meta name="twitter:description" content="0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
 
-<link rel="canonical" href="http://yoursite.com/archives/2019/12/">
+<link rel="canonical" href="http://yoursite.com/posts/other/ideaTalk/base_raspberry.html">
 
 
 <script id="page-configurations">
@@ -71,13 +73,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | AOYI</title>
+  <title>树莓派的折腾笔记 | AOYI</title>
   
 
 
@@ -174,49 +176,113 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 6 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/other/ideaTalk/base_raspberry.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pursuer">
+      <meta itemprop="description" content="追根溯源，返璞归真">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AOYI">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          树莓派的折腾笔记
+        </h1>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-26 14:46:30" itemprop="dateCreated datePublished" datetime="2020-06-26T14:46:30+08:00">2020-06-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/other/" itemprop="url" rel="index">
+                    <span itemprop="name">其他</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
+        <h2 id="0x01-树莓派连接Wi-Fi"><a href="#0x01-树莓派连接Wi-Fi" class="headerlink" title="0x01 树莓派连接Wi-Fi"></a>0x01 树莓派连接Wi-Fi</h2><p>sudo ifconfig wlan0 up</p><p>sudo apt install wpasupplicant</p><p>sudo killall wpa_supplicant</p><p>sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</p><a id="more"></a>
+
+
+
+<p>sudo apt install dhcpcd5</p>
+<p>sudo dhcpcd wlan0</p>
+<h2 id="0x02-Ubuntu系统中添加新用户和Samba"><a href="#0x02-Ubuntu系统中添加新用户和Samba" class="headerlink" title="0x02 Ubuntu系统中添加新用户和Samba"></a>0x02 Ubuntu系统中添加新用户和Samba</h2><p>sudo adduser renzhenpeng</p>
+<p>sudo apt-get install samba</p>
+<p>sudo apt-get install smbclient</p>
+<p>sudo apt-get install smbfs</p>
+<p>sudo vim /etc/samba/smb.conf </p>
+<p>sudo /etc/init.d/samba-ad-dc restart</p>
+<p>sudo service smbd reload</p>
+<p>sudo service smbd restart</p>
+<p>sudo service nmbd restart</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-12-08T20:50:28+08:00"
-              content="2019-12-08">
-          12-08
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Raspberry/" rel="tag"># Raspberry</a>
+              <a href="/tags/Ubuntu-20-04/" rel="tag"># Ubuntu 20.04</a>
+          </div>
 
-      <h2 class="post-title">
-          <a class="post-title-link" href="/posts/project/linuxKnl/1_startLinux.html" itemprop="url">
-            <span itemprop="name">SOME</span>
-          </a>
-      </h2>
+        
 
-    </header>
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/posts/other/dressHexo.html" rel="next" title="配置BLOG的一些小功能">
+                  <i class="fa fa-chevron-left"></i> 配置BLOG的一些小功能
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/posts/life/annalsDR/D_and_R_story.html" rel="prev" title="岁月荏苒与蹉跎">
+                  岁月荏苒与蹉跎 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
   </article>
+  
+  
+  
 
-
-    </div>
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -245,6 +311,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-树莓派连接Wi-Fi"><span class="nav-number">1.</span> <span class="nav-text">0x01 树莓派连接Wi-Fi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-Ubuntu系统中添加新用户和Samba"><span class="nav-number">2.</span> <span class="nav-text">0x02 Ubuntu系统中添加新用户和Samba</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
