@@ -1,5 +1,5 @@
 ---
-title: SOME
+title: Linux新知识点
 categories: 学习琐事
 date: 2019-12-08 20:50:28
 comments: false
@@ -10,9 +10,9 @@ tags:
 	- SUMMARY
 ---
 
-## 0x01 背景介绍
+## 0x01 shutdown命令
 
-123
+
 
 
 ## 0x02 

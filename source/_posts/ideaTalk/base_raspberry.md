@@ -1,6 +1,6 @@
 ---
 title: 树莓派的折腾笔记
-categories: 其他
+categories: 学习琐事
 date: 2020-06-26 14:46:30
 comments: false
 toc: true
