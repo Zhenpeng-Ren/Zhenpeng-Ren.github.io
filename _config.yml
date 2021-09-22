@@ -103,7 +103,8 @@ jsonContent:
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# repository: https://github.com/Zhenpeng-Ren/Zhenpeng-Ren.github.io.git
 deploy:
   type: git
-  repository: https://github.com/Zhenpeng-Ren/Zhenpeng-Ren.github.io.git
+  repository: git@github.com:Zhenpeng-Ren/Zhenpeng-Ren.github.io.git
   branch: master
