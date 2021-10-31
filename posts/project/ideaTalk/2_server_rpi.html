@@ -52,20 +52,20 @@
   };
 </script>
 
-  <meta name="description" content="(2020-06-26 14:46:30)0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
-<meta name="keywords" content="Raspberry,Wi-Fi&#x2F;SSH">
+  <meta name="description" content="0x01 来源之处0x02 安装nginx12345678#安装sudo apt-get install nginx#启动sudo /etc/init.d/nginx start#重启sudo /etc/init.d/nginx restart#停止sudo /etc/init.d/nginx stop">
+<meta name="keywords" content="Raspberry,server">
 <meta property="og:type" content="article">
-<meta property="og:title" content="树莓派的折腾笔记">
-<meta property="og:url" content="http://yoursite.com/posts/project/ideaTalk/base_raspberry.html">
+<meta property="og:title" content="Server In RPi">
+<meta property="og:url" content="http://yoursite.com/posts/project/ideaTalk/2_server_rpi.html">
 <meta property="og:site_name" content="AOYI">
-<meta property="og:description" content="(2020-06-26 14:46:30)0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
+<meta property="og:description" content="0x01 来源之处0x02 安装nginx12345678#安装sudo apt-get install nginx#启动sudo /etc/init.d/nginx start#重启sudo /etc/init.d/nginx restart#停止sudo /etc/init.d/nginx stop">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2021-10-24T14:14:53.003Z">
+<meta property="og:updated_time" content="2021-10-31T11:48:25.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="树莓派的折腾笔记">
-<meta name="twitter:description" content="(2020-06-26 14:46:30)0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
+<meta name="twitter:title" content="Server In RPi">
+<meta name="twitter:description" content="0x01 来源之处0x02 安装nginx12345678#安装sudo apt-get install nginx#启动sudo /etc/init.d/nginx start#重启sudo /etc/init.d/nginx restart#停止sudo /etc/init.d/nginx stop">
 
-<link rel="canonical" href="http://yoursite.com/posts/project/ideaTalk/base_raspberry.html">
+<link rel="canonical" href="http://yoursite.com/posts/project/ideaTalk/2_server_rpi.html">
 
 
 <script id="page-configurations">
@@ -79,7 +79,7 @@
   };
 </script>
 
-  <title>树莓派的折腾笔记 | AOYI</title>
+  <title>Server In RPi | AOYI</title>
   
 
 
@@ -181,7 +181,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/project/ideaTalk/base_raspberry.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/project/ideaTalk/2_server_rpi.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -194,7 +194,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          树莓派的折腾笔记
+          Server In RPi
         </h1>
 
         <div class="post-meta">
@@ -205,7 +205,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2021-10-24 22:11:30" itemprop="dateCreated datePublished" datetime="2021-10-24T22:11:30+08:00">2021-10-24</time>
+              <time title="Created: 2021-10-30 22:00:30" itemprop="dateCreated datePublished" datetime="2021-10-30T22:00:30+08:00">2021-10-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -230,27 +230,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>(2020-06-26 14:46:30)</p><h2 id="0x01-树莓派连接Wi-Fi"><a href="#0x01-树莓派连接Wi-Fi" class="headerlink" title="0x01 树莓派连接Wi-Fi"></a>0x01 树莓派连接Wi-Fi</h2><p>sudo ifconfig wlan0 up</p><p>sudo apt install wpasupplicant</p><p>sudo killall wpa_supplicant</p><p>sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</p><a id="more"></a>
+        <h2 id="0x01-来源之处"><a href="#0x01-来源之处" class="headerlink" title="0x01 来源之处"></a>0x01 <a href="https://mp.weixin.qq.com/s/x0LC8D5InejKkGoIkC3bgQ" target="_blank" rel="noopener">来源之处</a></h2><h2 id="0x02-安装nginx"><a href="#0x02-安装nginx" class="headerlink" title="0x02 安装nginx"></a>0x02 安装nginx</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#安装</span></span><br><span class="line">sudo apt-get install nginx</span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">sudo /etc/init.d/nginx start</span><br><span class="line"><span class="comment">#重启</span></span><br><span class="line">sudo /etc/init.d/nginx restart</span><br><span class="line"><span class="comment">#停止</span></span><br><span class="line">sudo /etc/init.d/nginx stop</span><br></pre></td></tr></table></figure><a id="more"></a>
 
+<h2 id="0x03-安装nodejs-ARMv7"><a href="#0x03-安装nodejs-ARMv7" class="headerlink" title="0x03 安装nodejs ARMv7"></a>0x03 安装<a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">nodejs ARMv7</a></h2><h3 id="下载node"><a href="#下载node" class="headerlink" title="下载node"></a>下载node</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nodejs.org/dist/v16.13.0/node-v16.13.0-linux-armv7l.tar.xz</span><br></pre></td></tr></table></figure>
 
+<h3 id="解压nodejs"><a href="#解压nodejs" class="headerlink" title="解压nodejs"></a>解压nodejs</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /usr/<span class="built_in">local</span>/lib/nodejs</span><br><span class="line">sudo tar -xJvf node-v16.13.0-linux-armv7l.tar.xz -C /usr/<span class="built_in">local</span>/lib/nodejs</span><br></pre></td></tr></table></figure>
 
+<h3 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Nodejs</span></span><br><span class="line">VERSION=v16.13.0</span><br><span class="line">DISTRO=linux-armv7l</span><br><span class="line"><span class="built_in">export</span> PATH=/usr/<span class="built_in">local</span>/lib/nodejs/node-<span class="variable">$VERSION</span>-<span class="variable">$DISTRO</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 
-<p>sudo apt install dhcpcd5</p>
-<p>sudo dhcpcd wlan0</p>
-<h2 id="0x02-Ubuntu系统中添加新用户和Samba"><a href="#0x02-Ubuntu系统中添加新用户和Samba" class="headerlink" title="0x02 Ubuntu系统中添加新用户和Samba"></a>0x02 Ubuntu系统中添加新用户和Samba</h2><p>sudo adduser renzhenpeng</p>
-<p>sudo apt-get install samba</p>
-<p>sudo apt-get install smbclient</p>
-<p>sudo apt-get install smbfs</p>
-<p>sudo vim /etc/samba/smb.conf </p>
-<p>sudo /etc/init.d/samba-ad-dc restart</p>
-<p>sudo service smbd reload</p>
-<p>sudo service smbd restart</p>
-<p>sudo service nmbd restart</p>
-<p>(2021-10-24 22:11:30)</p>
-<h2 id="0x03-配置RPi开机自动连网并开启ssh"><a href="#0x03-配置RPi开机自动连网并开启ssh" class="headerlink" title="0x03 配置RPi开机自动连网并开启ssh"></a>0x03 配置RPi开机自动连网并开启ssh</h2><p>配置原因：身边没有找到外接屏幕和键盘的情况</p>
-<p>操作步骤：</p>
-<p>（1）下载树莓派的操作系统<a href="https://www.raspberrypi.com/software/operating-systems/" target="_blank" rel="noopener">OS Lite</a><br>（2）使用<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">balenaEtcher-1.5.122</a>烧写OS Lite到TF卡上<br>（3）使用读卡器将TF卡连到电脑上<br>（4）在根目录/boot下新建wpa_supplicant.conf，内容见附录A<br>（5）在根目录/boot下新建ssh文件，内容为空<br>（6）将TF卡插进树莓派进行系统启动，过一阵儿时间就可以在路由器的web页面查看到给树莓派分配的ip<br>（7）此时使用ssh <a href="mailto:pi@192.168.xx.xx" target="_blank" rel="noopener">pi@192.168.xx.xx</a>，回车后输入默认密码raspberry，即可登录</p>
-<h3 id="附录A"><a href="#附录A" class="headerlink" title="附录A"></a>附录A</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">country=CN</span><br><span class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=1</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">	ssid=<span class="string">"WiFi-A"</span></span><br><span class="line">	psk=<span class="string">"12345678"</span></span><br><span class="line">	key_mgmt=WPA-PSK</span><br><span class="line">	priority=1       <span class="comment"># 优先级：数字越小，优先级越低</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">	ssid=<span class="string">"WiFi-B"</span></span><br><span class="line">	psk=<span class="string">"12345678"</span></span><br><span class="line">	key_mgmt=WPA-PSK</span><br><span class="line">	priority=2</span><br><span class="line">	scan_ssid=1       <span class="comment"># wifi为隐藏状态时，配置为1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="更新profile"><a href="#更新profile" class="headerlink" title="更新profile"></a>更新profile</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">. ~/.profile</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试node"><a href="#测试node" class="headerlink" title="测试node"></a>测试node</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm version</span><br><span class="line">npx -v</span><br></pre></td></tr></table></figure>
+
+<h2 id="0x04-下载blog"><a href="#0x04-下载blog" class="headerlink" title="0x04 下载blog"></a>0x04 下载blog</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+
+<h2 id="0x05-开始"><a href="#0x05-开始" class="headerlink" title="0x05 开始"></a>0x05 开始</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 
     </div>
@@ -262,15 +258,15 @@
       <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Raspberry/" rel="tag"># Raspberry</a>
-              <a href="/tags/Wi-Fi-SSH/" rel="tag"># Wi-Fi/SSH</a>
+              <a href="/tags/server/" rel="tag"># server</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
-                <a href="/posts/life/annalsDR/D_and_R_story.html" rel="next" title="岁月荏苒与蹉跎">
-                  <i class="fa fa-chevron-left"></i> 岁月荏苒与蹉跎
+                <a href="/posts/project/ideaTalk/1_sailbox_rpi.html" rel="next" title="SAIL BOX">
+                  <i class="fa fa-chevron-left"></i> SAIL BOX
                 </a>
             </div>
 
@@ -315,7 +311,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-树莓派连接Wi-Fi"><span class="nav-number">1.</span> <span class="nav-text">0x01 树莓派连接Wi-Fi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-Ubuntu系统中添加新用户和Samba"><span class="nav-number">2.</span> <span class="nav-text">0x02 Ubuntu系统中添加新用户和Samba</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-配置RPi开机自动连网并开启ssh"><span class="nav-number">3.</span> <span class="nav-text">0x03 配置RPi开机自动连网并开启ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录A"><span class="nav-number">3.1.</span> <span class="nav-text">附录A</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-来源之处"><span class="nav-number">1.</span> <span class="nav-text">0x01 来源之处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-安装nginx"><span class="nav-number">2.</span> <span class="nav-text">0x02 安装nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-安装nodejs-ARMv7"><span class="nav-number">3.</span> <span class="nav-text">0x03 安装nodejs ARMv7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载node"><span class="nav-number">3.1.</span> <span class="nav-text">下载node</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压nodejs"><span class="nav-number">3.2.</span> <span class="nav-text">解压nodejs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置环境变量"><span class="nav-number">3.3.</span> <span class="nav-text">设置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新profile"><span class="nav-number">3.4.</span> <span class="nav-text">更新profile</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试node"><span class="nav-number">3.5.</span> <span class="nav-text">测试node</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-下载blog"><span class="nav-number">4.</span> <span class="nav-text">0x04 下载blog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x05-开始"><span class="nav-number">5.</span> <span class="nav-text">0x05 开始</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -331,7 +327,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -340,7 +336,7 @@
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>

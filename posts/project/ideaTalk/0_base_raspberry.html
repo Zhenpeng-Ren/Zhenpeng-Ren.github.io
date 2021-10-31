@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <link rel="manifest" href="/images/manifest.json">
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.4.2',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
+<meta name="keywords" content="Raspberry,Wi-Fi&#x2F;SSH">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派的折腾笔记">
+<meta property="og:url" content="http://yoursite.com/posts/project/ideaTalk/0_base_raspberry.html">
+<meta property="og:site_name" content="AOYI">
+<meta property="og:description" content="0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:updated_time" content="2021-10-31T10:15:42.308Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树莓派的折腾笔记">
+<meta name="twitter:description" content="0x01 树莓派连接Wi-Fisudo ifconfig wlan0 upsudo apt install wpasupplicantsudo killall wpa_supplicantsudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf">
+
+<link rel="canonical" href="http://yoursite.com/posts/project/ideaTalk/0_base_raspberry.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>树莓派的折腾笔记 | AOYI</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">AOYI</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/project/ideaTalk/0_base_raspberry.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pursuer">
+      <meta itemprop="description" content="追根溯源，返璞归真">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AOYI">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          树莓派的折腾笔记
+        </h1>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-10-24 22:11:30" itemprop="dateCreated datePublished" datetime="2021-10-24T22:11:30+08:00">2021-10-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">学习琐事</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="0x01-树莓派连接Wi-Fi"><a href="#0x01-树莓派连接Wi-Fi" class="headerlink" title="0x01 树莓派连接Wi-Fi"></a>0x01 树莓派连接Wi-Fi</h2><p>sudo ifconfig wlan0 up</p><p>sudo apt install wpasupplicant</p><p>sudo killall wpa_supplicant</p><p>sudo wpa_supplicant -B -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf</p><a id="more"></a>
+
+
+
+<p>sudo apt install dhcpcd5</p>
+<p>sudo dhcpcd wlan0</p>
+<h2 id="0x02-Ubuntu系统中添加新用户和Samba"><a href="#0x02-Ubuntu系统中添加新用户和Samba" class="headerlink" title="0x02 Ubuntu系统中添加新用户和Samba"></a>0x02 Ubuntu系统中添加新用户和Samba</h2><p>sudo adduser renzhenpeng</p>
+<p>sudo apt-get install samba</p>
+<p>sudo apt-get install smbclient</p>
+<p>sudo apt-get install smbfs</p>
+<p>sudo vim /etc/samba/smb.conf </p>
+<p>sudo /etc/init.d/samba-ad-dc restart</p>
+<p>sudo service smbd reload</p>
+<p>sudo service smbd restart</p>
+<p>sudo service nmbd restart</p>
+<p>(2020-06-26 14:46:30)</p>
+<h2 id="0x03-配置RPi开机自动连网并开启ssh"><a href="#0x03-配置RPi开机自动连网并开启ssh" class="headerlink" title="0x03 配置RPi开机自动连网并开启ssh"></a>0x03 配置RPi开机自动连网并开启ssh</h2><p>配置原因：身边没有找到外接屏幕和键盘的情况</p>
+<p>操作步骤：</p>
+<p>（1）下载树莓派的操作系统<a href="https://www.raspberrypi.com/software/operating-systems/" target="_blank" rel="noopener">OS Lite</a><br>（2）使用<a href="https://www.balena.io/etcher/" target="_blank" rel="noopener">balenaEtcher-1.5.122</a>烧写OS Lite到TF卡上<br>（3）使用读卡器将TF卡连到电脑上<br>（4）在根目录/boot下新建wpa_supplicant.conf，内容见附录A<br>（5）在根目录/boot下新建ssh文件，内容为空<br>（6）将TF卡插进树莓派进行系统启动，过一阵儿时间就可以在路由器的web页面查看到给树莓派分配的ip<br>（7）此时使用ssh <a href="mailto:pi@192.168.xx.xx" target="_blank" rel="noopener">pi@192.168.xx.xx</a>，回车后输入默认密码raspberry，即可登录</p>
+<h3 id="附录A"><a href="#附录A" class="headerlink" title="附录A"></a>附录A</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">country=CN</span><br><span class="line">ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev</span><br><span class="line">update_config=1</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">	ssid=<span class="string">"WiFi-A"</span></span><br><span class="line">	psk=<span class="string">"12345678"</span></span><br><span class="line">	key_mgmt=WPA-PSK</span><br><span class="line">	priority=1       <span class="comment"># 优先级：数字越小，优先级越低</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">network=&#123;</span><br><span class="line">	ssid=<span class="string">"WiFi-B"</span></span><br><span class="line">	psk=<span class="string">"12345678"</span></span><br><span class="line">	key_mgmt=WPA-PSK</span><br><span class="line">	priority=2</span><br><span class="line">	scan_ssid=1       <span class="comment"># wifi为隐藏状态时，配置为1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="0x04-python脚本获取树莓派的使用信息"><a href="#0x04-python脚本获取树莓派的使用信息" class="headerlink" title="0x04 python脚本获取树莓派的使用信息"></a>0x04 python脚本获取树莓派的使用信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line"></span><br><span class="line"><span class="comment"># Return CPU temperature as a character string</span></span><br><span class="line"></span><br><span class="line">def getCPUtemperature():</span><br><span class="line">	res = os.popen(<span class="string">'vcgencmd measure_temp'</span>).readline()</span><br><span class="line">	<span class="built_in">return</span>(res.replace(<span class="string">"temp="</span>,<span class="string">""</span>).replace(<span class="string">"'C\n"</span>,<span class="string">""</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Return RAM information (unit=kb) in a list</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Index 0: total RAM</span></span><br><span class="line"><span class="comment"># Index 1: used RAM</span></span><br><span class="line"><span class="comment"># Index 2: free RAM</span></span><br><span class="line"></span><br><span class="line">def getRAMinfo():</span><br><span class="line">	p = os.popen(<span class="string">'free'</span>)</span><br><span class="line">	i = 0</span><br><span class="line">	<span class="keyword">while</span> 1:</span><br><span class="line">		i = i + 1</span><br><span class="line">		line = p.readline()</span><br><span class="line">		<span class="keyword">if</span> i==2:</span><br><span class="line">			<span class="built_in">return</span>(line.split()[1:4])</span><br><span class="line"></span><br><span class="line"><span class="comment"># Return % of CPU used by user as a character string</span></span><br><span class="line"></span><br><span class="line">def getCPUuse():</span><br><span class="line">	<span class="built_in">return</span>(str(os.popen(<span class="string">"top -n1 | awk '/Cpu\(s\):/ &#123;print <span class="variable">$2</span>&#125;'"</span>).readline().strip()))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Return information about disk space as a list (unit included)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Index 0: total disk space</span></span><br><span class="line"><span class="comment"># Index 1: used disk space</span></span><br><span class="line"><span class="comment"># Index 2: remaining disk space</span></span><br><span class="line"><span class="comment"># Index 3: percentage of disk used</span></span><br><span class="line"></span><br><span class="line">def getDiskSpace():</span><br><span class="line">	p = os.popen(<span class="string">"df -h /"</span>)</span><br><span class="line">	i = 0</span><br><span class="line">	<span class="keyword">while</span> 1:</span><br><span class="line">		i = i +1</span><br><span class="line">		line = p.readline()</span><br><span class="line">		<span class="keyword">if</span> i==2:</span><br><span class="line">			<span class="built_in">return</span>(line.split()[1:5])</span><br><span class="line"></span><br><span class="line"><span class="comment"># CPU informatiom</span></span><br><span class="line">CPU_temp = getCPUtemperature()</span><br><span class="line">CPU_usage = getCPUuse()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># RAM information</span></span><br><span class="line"><span class="comment"># Output is in kb, here I convert it in Mb for readability</span></span><br><span class="line"></span><br><span class="line">RAM_stats = getRAMinfo()</span><br><span class="line">RAM_total = round(int(RAM_stats[0]) / 1000,1)</span><br><span class="line">RAM_used = round(int(RAM_stats[1]) / 1000,1)</span><br><span class="line">RAM_free = round(int(RAM_stats[2]) / 1000,1)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Disk information</span></span><br><span class="line"></span><br><span class="line">DISK_stats = getDiskSpace()</span><br><span class="line">DISK_total = DISK_stats[0]</span><br><span class="line">DISK_used = DISK_stats[1]</span><br><span class="line">DISK_perc = DISK_stats[3]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">''</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'CPU Temperature = '</span>+CPU_temp)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'CPU Use = '</span>+CPU_usage)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">''</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'RAM Total = '</span>+str(RAM_total)+<span class="string">' MB'</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'RAM Used = '</span>+str(RAM_used)+<span class="string">' MB'</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'RAM Free = '</span>+str(RAM_free)+<span class="string">' MB'</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">''</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'DISK Total Space = '</span>+str(DISK_total)+<span class="string">'B'</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'DISK Used Space = '</span>+str(DISK_used)+<span class="string">'B'</span>)</span><br><span class="line">	<span class="built_in">print</span>(<span class="string">'DISK Used Percentage = '</span>+str(DISK_perc))</span><br></pre></td></tr></table></figure>
+
+<p>(2021-10-24 22:11:30)</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Raspberry/" rel="tag"># Raspberry</a>
+              <a href="/tags/Wi-Fi-SSH/" rel="tag"># Wi-Fi/SSH</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+                <a href="/posts/life/annalsDR/D_and_R_story.html" rel="next" title="岁月荏苒与蹉跎">
+                  <i class="fa fa-chevron-left"></i> 岁月荏苒与蹉跎
+                </a>
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+                <a href="/posts/project/ideaTalk/1_sailbox_rpi.html" rel="prev" title="SAIL BOX">
+                  SAIL BOX <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-树莓派连接Wi-Fi"><span class="nav-number">1.</span> <span class="nav-text">0x01 树莓派连接Wi-Fi</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-Ubuntu系统中添加新用户和Samba"><span class="nav-number">2.</span> <span class="nav-text">0x02 Ubuntu系统中添加新用户和Samba</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-配置RPi开机自动连网并开启ssh"><span class="nav-number">3.</span> <span class="nav-text">0x03 配置RPi开机自动连网并开启ssh</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#附录A"><span class="nav-number">3.1.</span> <span class="nav-text">附录A</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-python脚本获取树莓派的使用信息"><span class="nav-number">4.</span> <span class="nav-text">0x04 python脚本获取树莓派的使用信息</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="site-author-image" itemprop="image" alt="Pursuer"
+    src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Pursuer</p>
+  <div class="site-description" itemprop="description">追根溯源，返璞归真</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Pursuer</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/clicklove.js"></script>
+</body>
+</html>
