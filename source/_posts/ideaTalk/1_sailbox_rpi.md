@@ -709,7 +709,7 @@ DINGDANG
 ROBOT
 其中 ROBOT 替换为你需要的机器人名字的全拼。
 
-到 lmtool 里上传你刚刚创建的 keyword.txt 并编译成模型。
+到 [lmtool](http://www.speech.cs.cmu.edu/tools/lmtool-new.html) 里上传你刚刚创建的 keyword.txt 并编译成模型。
 把得到的 .dic 文件和 .lm 文件分别重命名为 dictionary 和 languagemodel，替换 /home/pi/.dingdang/vocabularies/pocketsphinx-vocabulary/keyword 下的同名文件。
 重新运行 dingdang ，看看新的唤醒词灵敏度如何。如果不理想，换成别的唤醒词.
 
