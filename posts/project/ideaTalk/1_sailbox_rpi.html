@@ -60,7 +60,7 @@
 <meta property="og:site_name" content="AOYI">
 <meta property="og:description" content="0x01 名称由来Sail，可以意为启航，表示即将开启一段新的征程。云雀0x02 基本的配置过程jaspar-client（1）选择Expand Filesystem，并重启1sudo raspi-config（2）安装必要的工具123456sudo apt-get updatesudo apt-get upgrade --yessudo apt-get install nano git-core">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2021-10-31T11:25:09.487Z">
+<meta property="og:updated_time" content="2021-10-31T13:34:37.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SAIL BOX">
 <meta name="twitter:description" content="0x01 名称由来Sail，可以意为启航，表示即将开启一段新的征程。云雀0x02 基本的配置过程jaspar-client（1）选择Expand Filesystem，并重启1sudo raspi-config（2）安装必要的工具123456sudo apt-get updatesudo apt-get upgrade --yessudo apt-get install nano git-core">
@@ -405,7 +405,7 @@
 
 <h4 id="修改唤醒词"><a href="#修改唤醒词" class="headerlink" title="修改唤醒词"></a>修改唤醒词</h4><p>如果使用的是 PocketSphinx</p>
 <p>在 profile.yml 配置文件中修改 robot_name 和 robot_name_cn 配置项；<br>编写一个 keyword.txt 文件，包含至少两个名字的全拼：<br>DINGDANG<br>ROBOT<br>其中 ROBOT 替换为你需要的机器人名字的全拼。</p>
-<p>到 lmtool 里上传你刚刚创建的 keyword.txt 并编译成模型。<br>把得到的 .dic 文件和 .lm 文件分别重命名为 dictionary 和 languagemodel，替换 /home/pi/.dingdang/vocabularies/pocketsphinx-vocabulary/keyword 下的同名文件。<br>重新运行 dingdang ，看看新的唤醒词灵敏度如何。如果不理想，换成别的唤醒词.</p>
+<p>到 <a href="http://www.speech.cs.cmu.edu/tools/lmtool-new.html" target="_blank" rel="noopener">lmtool</a> 里上传你刚刚创建的 keyword.txt 并编译成模型。<br>把得到的 .dic 文件和 .lm 文件分别重命名为 dictionary 和 languagemodel，替换 /home/pi/.dingdang/vocabularies/pocketsphinx-vocabulary/keyword 下的同名文件。<br>重新运行 dingdang ，看看新的唤醒词灵敏度如何。如果不理想，换成别的唤醒词.</p>
 
     </div>
 
