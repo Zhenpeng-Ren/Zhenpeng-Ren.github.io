@@ -12,8 +12,12 @@ tags:
 
 ## 0x01 shutdown命令
 
-
-
+```bash
+# 重启
+sudo shutdown -r now
+# 关机
+sudo shutdown -h now
+```
 
 ## 0x02 
 
