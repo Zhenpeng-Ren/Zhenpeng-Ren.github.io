@@ -44,9 +44,9 @@
     path: '',
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Kopieren',
-      copy_success: 'Kopiert',
-      copy_failure: 'Kopieren fehlgeschlagen'
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
     },
     sidebarPadding: 40
   };
@@ -130,7 +130,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Navigationsleiste an/ausschalten">
+    <div class="toggle" aria-label="Toggle navigation bar">
       <span class="toggle-line toggle-line-first"></span>
       <span class="toggle-line toggle-line-middle"></span>
       <span class="toggle-line toggle-line-last"></span>
@@ -144,12 +144,12 @@
   <ul id="menu" class="menu">
         <li class="menu-item menu-item-home">
 
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Startseite</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archiv</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
   </ul>
@@ -179,6 +179,83 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/project/Use_My_NAS_QANP.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pursuer">
+      <meta itemprop="description" content="追根溯源，返璞归真">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AOYI">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/project/Use_My_NAS_QANP.html" class="post-title-link" itemprop="url">QANP NAS常用软件安装</a>
+        </h1>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-23 23:23:08" itemprop="dateCreated datePublished" datetime="2022-05-23T23:23:08+08:00">2022-05-23</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">学习琐事</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="0x01-Transmission"><a href="#0x01-Transmission" class="headerlink" title="0x01 Transmission"></a>0x01 Transmission</h2><p>教程链接: <a href="https://zhuanlan.zhihu.com/p/66422126" target="_blank" rel="noopener">在Container Station中安装Transmission</a></p><p>Container Station中搜索Transmission，选择并安装linuxserver/transmission</p><p>高级配置中（前提是先在file station中创建共享文件夹，并新建三个目录）</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/project/Use_My_NAS_QANP.html#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh_CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/life/annalsDR/D_and_R_story.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -202,15 +279,15 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Erstellt: 2022-05-17 22:00:30" itemprop="dateCreated datePublished" datetime="2022-05-17T22:00:30+08:00">2022-05-17</time>
+              <time title="Created: 2022-05-17 22:00:30" itemprop="dateCreated datePublished" datetime="2022-05-17T22:00:30+08:00">2022-05-17</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/life/" itemprop="url" rel="index">
                     <span itemprop="name">生活杂谈</span>
@@ -233,7 +310,7 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/life/annalsDR/D_and_R_story.html#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -279,15 +356,15 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Erstellt: 2021-10-30 22:00:30" itemprop="dateCreated datePublished" datetime="2021-10-30T22:00:30+08:00">2021-10-30</time>
+              <time title="Created: 2021-10-30 22:00:30" itemprop="dateCreated datePublished" datetime="2021-10-30T22:00:30+08:00">2021-10-30</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/project/" itemprop="url" rel="index">
                     <span itemprop="name">学习琐事</span>
@@ -310,84 +387,7 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/project/ideaTalk/2_server_rpi.html#more" rel="contents">
-                Weiterlesen &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/project/ideaTalk/1_sailbox_rpi.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Pursuer">
-      <meta itemprop="description" content="追根溯源，返璞归真">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AOYI">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/project/ideaTalk/1_sailbox_rpi.html" class="post-title-link" itemprop="url">SAIL BOX</a>
-        </h1>
-
-        <div class="post-meta">
-
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
-
-              <time title="Erstellt: 2021-10-24 22:11:30" itemprop="dateCreated datePublished" datetime="2021-10-24T22:11:30+08:00">2021-10-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">in</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/project/" itemprop="url" rel="index">
-                    <span itemprop="name">学习琐事</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="0x01-名称由来"><a href="#0x01-名称由来" class="headerlink" title="0x01 名称由来"></a>0x01 名称由来</h2><p>Sail，可以意为启航，表示即将开启一段新的征程。</p><p>云雀</p><h2 id="0x02-基本的配置过程"><a href="#0x02-基本的配置过程" class="headerlink" title="0x02 基本的配置过程"></a>0x02 基本的配置过程</h2><p><a href="https://github.com/jasperproject/jasper-client" target="_blank" rel="noopener">jaspar-client</a></p><p>（1）选择Expand Filesystem，并重启</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure><p>（2）安装必要的工具</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade --yes</span><br><span class="line">sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio --yes</span><br><span class="line">sudo apt-get remove python-pip</span><br><span class="line"><span class="comment"># error for installing pip（需要源码先安装setup-tools，再源码编译安装pip）</span></span><br><span class="line"><span class="comment"># sudo easy_install pip</span></span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/project/ideaTalk/1_sailbox_rpi.html#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -433,15 +433,15 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Erstellt: 2021-10-24 22:11:30" itemprop="dateCreated datePublished" datetime="2021-10-24T22:11:30+08:00">2021-10-24</time>
+              <time title="Created: 2021-10-24 22:11:30" itemprop="dateCreated datePublished" datetime="2021-10-24T22:11:30+08:00">2021-10-24</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/project/" itemprop="url" rel="index">
                     <span itemprop="name">学习琐事</span>
@@ -464,7 +464,84 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/project/ideaTalk/0_base_raspberry.html#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh_CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/project/ideaTalk/1_sailbox_rpi.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Pursuer">
+      <meta itemprop="description" content="追根溯源，返璞归真">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AOYI">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/posts/project/ideaTalk/1_sailbox_rpi.html" class="post-title-link" itemprop="url">SAIL BOX</a>
+        </h1>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-10-24 22:11:30" itemprop="dateCreated datePublished" datetime="2021-10-24T22:11:30+08:00">2021-10-24</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/project/" itemprop="url" rel="index">
+                    <span itemprop="name">学习琐事</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="0x01-名称由来"><a href="#0x01-名称由来" class="headerlink" title="0x01 名称由来"></a>0x01 名称由来</h2><p>Sail，可以意为启航，表示即将开启一段新的征程。</p><p>云雀</p><h2 id="0x02-基本的配置过程"><a href="#0x02-基本的配置过程" class="headerlink" title="0x02 基本的配置过程"></a>0x02 基本的配置过程</h2><p><a href="https://github.com/jasperproject/jasper-client" target="_blank" rel="noopener">jaspar-client</a></p><p>（1）选择Expand Filesystem，并重启</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo raspi-config</span><br></pre></td></tr></table></figure><p>（2）安装必要的工具</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get upgrade --yes</span><br><span class="line">sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio --yes</span><br><span class="line">sudo apt-get remove python-pip</span><br><span class="line"><span class="comment"># error for installing pip（需要源码先安装setup-tools，再源码编译安装pip）</span></span><br><span class="line"><span class="comment"># sudo easy_install pip</span></span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/project/ideaTalk/1_sailbox_rpi.html#more" rel="contents">
+                Read more &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -510,15 +587,15 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Erstellt: 2020-03-08 10:23:50" itemprop="dateCreated datePublished" datetime="2020-03-08T10:23:50+08:00">2020-03-08</time>
+              <time title="Created: 2020-03-08 10:23:50" itemprop="dateCreated datePublished" datetime="2020-03-08T10:23:50+08:00">2020-03-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/other/" itemprop="url" rel="index">
                     <span itemprop="name">其他</span>
@@ -541,7 +618,7 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/other/dressHexo.html#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -587,15 +664,15 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Erstellt: 2019-12-08 20:50:28" itemprop="dateCreated datePublished" datetime="2019-12-08T20:50:28+08:00">2019-12-08</time>
+              <time title="Created: 2019-12-08 20:50:28" itemprop="dateCreated datePublished" datetime="2019-12-08T20:50:28+08:00">2019-12-08</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/project/" itemprop="url" rel="index">
                     <span itemprop="name">学习琐事</span>
@@ -656,15 +733,15 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
+              <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Erstellt: 2017-11-01 09:46:08" itemprop="dateCreated datePublished" datetime="2017-11-01T09:46:08+08:00">2017-11-01</time>
+              <time title="Created: 2017-11-01 09:46:08" itemprop="dateCreated datePublished" datetime="2017-11-01T09:46:08+08:00">2017-11-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">in</span>
+              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/other/" itemprop="url" rel="index">
                     <span itemprop="name">其他</span>
@@ -687,84 +764,7 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/other/loadingOS.html#more" rel="contents">
-                Weiterlesen &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh_CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/other/createBlog.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Pursuer">
-      <meta itemprop="description" content="追根溯源，返璞归真">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="AOYI">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/posts/other/createBlog.html" class="post-title-link" itemprop="url">博客搭建过程小记</a>
-        </h1>
-
-        <div class="post-meta">
-
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Veröffentlicht am</span>
-
-              <time title="Erstellt: 2017-10-14 16:18:00" itemprop="dateCreated datePublished" datetime="2017-10-14T16:18:00+08:00">2017-10-14</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">in</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/other/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="0x01-环境准备"><a href="#0x01-环境准备" class="headerlink" title="0x01 环境准备"></a>0x01 环境准备</h2><p>本次博客的搭建主要借助于 Github 平台，利用 Hexo 搭建自己免费简易的博客。同时完成的是将博客备份在 Github 同一个仓库的不同分支上。</p><h3 id="1-1-操作系统：Windows-10"><a href="#1-1-操作系统：Windows-10" class="headerlink" title="1.1 操作系统：Windows 10"></a>1.1 操作系统：Windows 10</h3><h3 id="1-2-Git版本：2-12-0-windows-1"><a href="#1-2-Git版本：2-12-0-windows-1" class="headerlink" title="1.2 Git版本：2.12.0.windows.1"></a>1.2 Git版本：2.12.0.windows.1</h3><p>在此可以下载 <a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">Git</a> 进行安装，主要的配置可以 <a href="https://segmentfault.com/a/1190000002645623" target="_blank" rel="noopener">在此</a> 查看。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/other/createBlog.html#more" rel="contents">
-                Weiterlesen &raquo;
+                Read more &raquo;
               </a>
             </div>
           <!--/noindex-->
@@ -786,6 +786,9 @@
   </div>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
 
 
 
@@ -806,10 +809,10 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-          Inhaltsverzeichnis
+          Table of Contents
         </li>
         <li class="sidebar-nav-overview">
-          Übersicht
+          Overview
         </li>
       </ul>
 
@@ -830,17 +833,17 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
-          <span class="site-state-item-name">Artikel</span>
+          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
         <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">Kategorien</span>
+        <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">schlagwörter</span>
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
@@ -878,7 +881,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
-      <span class="site-uv" title="Alle Besucher">
+      <span class="site-uv" title="Total Visitors">
         <span id="busuanzi_value_site_uv"></span>
       </span>
     </span>
@@ -887,7 +890,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
-      <span class="site-pv" title="Alle Aufrufe">
+      <span class="site-pv" title="Total Views">
         <span id="busuanzi_value_site_pv"></span>
       </span>
     </span>
