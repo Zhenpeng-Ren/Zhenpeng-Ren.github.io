@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -59,8 +59,8 @@
 <meta property="og:url" content="http://yoursite.com/posts/project/Use_My_NAS_QANP.html">
 <meta property="og:site_name" content="AOYI">
 <meta property="og:description" content="0x01 Transmission教程链接: 在Container Station中安装TransmissionContainer Station中搜索Transmission，选择并安装linuxserver/transmission高级配置中（前提是先在file station中创建共享文件夹，并新建三个目录）">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2022-05-23T15:45:55.161Z">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2022-05-23T16:15:38.382Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QANP NAS常用软件安装">
 <meta name="twitter:description" content="0x01 Transmission教程链接: 在Container Station中安装TransmissionContainer Station中搜索Transmission，选择并安装linuxserver/transmission高级配置中（前提是先在file station中创建共享文件夹，并新建三个目录）">
@@ -180,7 +180,7 @@
       
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh_CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/project/Use_My_NAS_QANP.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -236,13 +236,14 @@
 <p>进入左边共享文件夹栏，在挂载本机共享文件夹中新增三项：<br>==&gt; /config      Transmission的配置文件目录。<br>==&gt; /downloads   下载的文件将被放在这。<br>==&gt; /seeds       存放新种子文件目录</p>
 <p>其余的选择默认的即可，安装完毕后，点击链接即可进入下载页面。</p>
 <h2 id="0x02-Tailscale"><a href="#0x02-Tailscale" class="headerlink" title="0x02 Tailscale"></a>0x02 Tailscale</h2><p>下载最新的<a href="https://github.com/ivokub/tailscale-qpkg/releases/tag/v1.24.2" target="_blank" rel="noopener">Tailscale_v1.24.2_x86_64.qpkg</a></p>
+<p>QTS中APP Center，在设置中打开第三方软件安装许可(.qpkg)</p>
 <p>教程链接: <a href="https://github.com/ivokub/tailscale-qpkg" target="_blank" rel="noopener">Tailscale QPKG builder</a></p>
 <p>首先打开QANP中的SSH功能，然后命令行中使用ssh连接NAS。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ ssh 鸢什之家@192.168.0.110</span><br><span class="line"></span><br><span class="line">$ getcfg SHARE_DEF defVolMP -f /etc/config/def_share.info</span><br><span class="line">(e.g. /share/CE_CACHEDEV1_DATA/)</span><br><span class="line"></span><br><span class="line">$ <span class="built_in">cd</span> /share/CE_CACHEDEV1_DATA/.qpkg/Tailscale</span><br><span class="line"></span><br><span class="line">$ ./tailscale -socket var/run/tailscale/tailscaled.sock up</span><br></pre></td></tr></table></figure>
 
 <p>使用串口输出的链接，认证登录完成后，即可。</p>
 <p>手机端，电脑端均可下载对应APP，进行远程连接。</p>
-<h2 id="0x03"><a href="#0x03" class="headerlink" title="0x03"></a>0x03</h2>
+<h2 id="0x03-其他"><a href="#0x03-其他" class="headerlink" title="0x03 其他"></a>0x03 其他</h2>
     </div>
 
     
@@ -305,7 +306,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-Transmission"><span class="nav-number">1.</span> <span class="nav-text">0x01 Transmission</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-Tailscale"><span class="nav-number">2.</span> <span class="nav-text">0x02 Tailscale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03"><span class="nav-number">3.</span> <span class="nav-text">0x03</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-Transmission"><span class="nav-number">1.</span> <span class="nav-text">0x01 Transmission</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-Tailscale"><span class="nav-number">2.</span> <span class="nav-text">0x02 Tailscale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-其他"><span class="nav-number">3.</span> <span class="nav-text">0x03 其他</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
