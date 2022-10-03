@@ -31,6 +31,8 @@ Container Station中搜索Transmission，选择并安装linuxserver/transmission
 
 下载最新的[Tailscale_v1.24.2_x86_64.qpkg](https://github.com/ivokub/tailscale-qpkg/releases/tag/v1.24.2)
 
+QTS中APP Center，在设置中打开第三方软件安装许可(.qpkg)
+
 教程链接: [Tailscale QPKG builder](https://github.com/ivokub/tailscale-qpkg)
 
 首先打开QANP中的SSH功能，然后命令行中使用ssh连接NAS。
@@ -50,6 +52,7 @@ $ ./tailscale -socket var/run/tailscale/tailscaled.sock up
 
 手机端，电脑端均可下载对应APP，进行远程连接。
 
-## 0x03 
+
+## 0x03 其他
 
 
