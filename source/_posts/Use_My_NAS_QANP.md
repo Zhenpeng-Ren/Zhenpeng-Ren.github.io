@@ -27,7 +27,24 @@ Container Station中搜索Transmission，选择并安装linuxserver/transmission
 其余的选择默认的即可，安装完毕后，点击链接即可进入下载页面。
 
 
-## 0x02 Tailscale
+## 0x02 Tailscale(Docker)
+
+教程链接：[在Container Station中安装Tailscale](https://www.youtube.com/watch?v=OO0TcYGi0rc)
+
+可以实现非局域网下访问NAS。
+
+（1）Container Station中搜索Tailscale，选择并安装tailscale/tailscale
+
+（2）在高级设置中NET选择Host模式后，确定新建
+
+（3）点击Tailscale后，在控制面板处复制显示出来的链接，打开链接后[登录Tailscale](https://login.tailscale.com/login?next_url=%2Fwelcome)之后再确认
+
+（4）手机中安装Tailscale的APP，复制NAS的ip地址
+
+（5）Qfile中用这个ip地址登录，输入账号密码即可远程访问
+
+
+## 0x03 Tailscale(应用软件)
 
 下载最新的[Tailscale_v1.24.2_x86_64.qpkg](https://github.com/ivokub/tailscale-qpkg/releases/tag/v1.24.2)
 
@@ -53,6 +70,6 @@ $ ./tailscale -socket var/run/tailscale/tailscaled.sock up
 手机端，电脑端均可下载对应APP，进行远程连接。
 
 
-## 0x03 其他
+## 0x04 其他
 
 
