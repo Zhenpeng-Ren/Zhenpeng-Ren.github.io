@@ -60,7 +60,7 @@
 <meta property="og:site_name" content="AOYI">
 <meta property="og:description" content="0x01 Transmission教程链接: 在Container Station中安装TransmissionContainer Station中搜索Transmission，选择并安装linuxserver/transmission高级配置中（前提是先在file station中创建共享文件夹，并新建三个目录）">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2022-05-23T16:15:38.000Z">
+<meta property="og:updated_time" content="2022-12-17T09:05:43.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QANP NAS常用软件安装">
 <meta name="twitter:description" content="0x01 Transmission教程链接: 在Container Station中安装TransmissionContainer Station中搜索Transmission，选择并安装linuxserver/transmission高级配置中（前提是先在file station中创建共享文件夹，并新建三个目录）">
@@ -235,7 +235,14 @@
 
 <p>进入左边共享文件夹栏，在挂载本机共享文件夹中新增三项：<br>==&gt; /config      Transmission的配置文件目录。<br>==&gt; /downloads   下载的文件将被放在这。<br>==&gt; /seeds       存放新种子文件目录</p>
 <p>其余的选择默认的即可，安装完毕后，点击链接即可进入下载页面。</p>
-<h2 id="0x02-Tailscale"><a href="#0x02-Tailscale" class="headerlink" title="0x02 Tailscale"></a>0x02 Tailscale</h2><p>下载最新的<a href="https://github.com/ivokub/tailscale-qpkg/releases/tag/v1.24.2" target="_blank" rel="noopener">Tailscale_v1.24.2_x86_64.qpkg</a></p>
+<h2 id="0x02-Tailscale-Docker"><a href="#0x02-Tailscale-Docker" class="headerlink" title="0x02 Tailscale(Docker)"></a>0x02 Tailscale(Docker)</h2><p>教程链接：<a href="https://www.youtube.com/watch?v=OO0TcYGi0rc" target="_blank" rel="noopener">在Container Station中安装Tailscale</a></p>
+<p>可以实现非局域网下访问NAS。</p>
+<p>（1）Container Station中搜索Tailscale，选择并安装tailscale/tailscale</p>
+<p>（2）在高级设置中NET选择Host模式后，确定新建</p>
+<p>（3）点击Tailscale后，在控制面板处复制显示出来的链接，打开链接后<a href="https://login.tailscale.com/login?next_url=%2Fwelcome" target="_blank" rel="noopener">登录Tailscale</a>之后再确认</p>
+<p>（4）手机中安装Tailscale的APP，复制NAS的ip地址</p>
+<p>（5）Qfile中用这个ip地址登录，输入账号密码即可远程访问</p>
+<h2 id="0x03-Tailscale-应用软件"><a href="#0x03-Tailscale-应用软件" class="headerlink" title="0x03 Tailscale(应用软件)"></a>0x03 Tailscale(应用软件)</h2><p>下载最新的<a href="https://github.com/ivokub/tailscale-qpkg/releases/tag/v1.24.2" target="_blank" rel="noopener">Tailscale_v1.24.2_x86_64.qpkg</a></p>
 <p>QTS中APP Center，在设置中打开第三方软件安装许可(.qpkg)</p>
 <p>教程链接: <a href="https://github.com/ivokub/tailscale-qpkg" target="_blank" rel="noopener">Tailscale QPKG builder</a></p>
 <p>首先打开QANP中的SSH功能，然后命令行中使用ssh连接NAS。</p>
@@ -243,7 +250,7 @@
 
 <p>使用串口输出的链接，认证登录完成后，即可。</p>
 <p>手机端，电脑端均可下载对应APP，进行远程连接。</p>
-<h2 id="0x03-其他"><a href="#0x03-其他" class="headerlink" title="0x03 其他"></a>0x03 其他</h2>
+<h2 id="0x04-其他"><a href="#0x04-其他" class="headerlink" title="0x04 其他"></a>0x04 其他</h2>
     </div>
 
     
@@ -309,7 +316,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-Transmission"><span class="nav-number">1.</span> <span class="nav-text">0x01 Transmission</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-Tailscale"><span class="nav-number">2.</span> <span class="nav-text">0x02 Tailscale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-其他"><span class="nav-number">3.</span> <span class="nav-text">0x03 其他</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0x01-Transmission"><span class="nav-number">1.</span> <span class="nav-text">0x01 Transmission</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x02-Tailscale-Docker"><span class="nav-number">2.</span> <span class="nav-text">0x02 Tailscale(Docker)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x03-Tailscale-应用软件"><span class="nav-number">3.</span> <span class="nav-text">0x03 Tailscale(应用软件)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#0x04-其他"><span class="nav-number">4.</span> <span class="nav-text">0x04 其他</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
